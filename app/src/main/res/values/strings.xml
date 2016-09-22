@@ -4,4 +4,11 @@
     <string name="btn_come_in">进入主页</string>
     <string name="btn_log_out">登出</string>
     <string name="btn_register">注册</string>
+    <string name="welcomeInHome">欢迎进入主页</string>
+    <string name="tab_menu_alert">提醒</string>
+    <string name="tab_menu_profile">信息</string>
+    <string name="tab_menu_pay">我的</string>
+    <string name="tab_menu_setting">设置</string>
+    <string name="comeInServer">进入服务</string>
+    <string name="btn_customer_camera">自定义照相机</string>
 </resources>

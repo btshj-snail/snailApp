@@ -100,11 +100,19 @@
                     android:text="@string/btn_come_in" />
 
                 <Button
+                    android:id="@+id/goAnimalListBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_log_out" />
+
+                <Button
                     android:id="@+id/logoutBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_log_out" />
 
+            </TableRow>
+            <TableRow>
                 <Button
                     android:id="@+id/registerBtn"
                     android:layout_width="wrap_content"
@@ -115,7 +123,13 @@
                     android:id="@+id/goServiceBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="进入服务" />
+                    android:text="@string/comeInServer" />
+
+                <Button
+                    android:id="@+id/goCameraBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_customer_camera" />
             </TableRow>
         </TableLayout>
     </LinearLayout>
