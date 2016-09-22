@@ -11,4 +11,7 @@
     <string name="tab_menu_setting">设置</string>
     <string name="comeInServer">进入服务</string>
     <string name="btn_customer_camera">自定义照相机</string>
+    <string name="counterview">下面展示的是自定义的CounterView</string>
+    <string name="btn_customView_text">查看自定义view案例</string>
+    <string name="assemble_custom_view_text">下面展示的是使用组合控件的方式自定义View</string>
 </resources>

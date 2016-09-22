@@ -130,6 +130,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_customer_camera" />
+
+                <Button
+                    android:id="@+id/goCustomViewBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_customView_text" />
             </TableRow>
         </TableLayout>
     </LinearLayout>

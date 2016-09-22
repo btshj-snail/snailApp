@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Button registerBtn = (Button) findViewById(R.id.registerBtn);
         Button goServiceBtn = (Button) findViewById(R.id.goServiceBtn);
         Button goCameraBtn = (Button) findViewById(R.id.goCameraBtn);
+        Button goCustomViewBtn = (Button) findViewById(R.id.goCustomViewBtn);
         BtnListener btnListener = new BtnListener();
         goHomeBtn.setOnClickListener(btnListener);
         goAnimalListBtn.setOnClickListener(btnListener);
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(btnListener);
         goServiceBtn.setOnClickListener(btnListener);
         goCameraBtn.setOnClickListener(btnListener);
+        goCustomViewBtn.setOnClickListener(btnListener);
     }
 
     public void goHomeEvent(View v){
@@ -69,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,CameraActivity.class);
         startActivity(intent);
     }
+    public void goCustomViewEvent(View v){
+            logcatUtils.d("打开自定义View Demo界面");
+            Intent intent = new Intent(MainActivity.this,CustomViewDemoActivity.class);
+            startActivity(intent);
+        }
 
 
 
@@ -84,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.registerBtn:registerEvent(v);break;
                 case R.id.goServiceBtn:goServiceEvent(v);break;
                 case R.id.goCameraBtn:goCustomerCameraEvent(v);break;
+                case R.id.goCustomViewBtn:goCustomViewEvent(v);break;
             }
         }
     }
