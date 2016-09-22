@@ -1,8 +1,8 @@
-package com.study.runningsnail.snailapp;
+package com.study.runningsnail.snailapp.activity;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,28 +11,36 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.study.runningsnail.snailapp.R;
 import com.study.runningsnail.snailapp.adapter.AnimalAdapter;
 import com.study.runningsnail.snailapp.domain.Animal;
 import com.study.runningsnail.snailapp.eventListener.AnimalListBtnListener;
+import com.study.runningsnail.snailapp.utils.LogcatUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by snail on 2016/9/21.
+ */
+
+public class AnimalListActivity extends AppCompatActivity {
 
     private List<Animal> animalList = null;
     private Context context;
     private AnimalAdapter animalAdapter = null;
     private ListView list_animal;
+    private LogcatUtils logcatUtils = LogcatUtils.getLogCat(AnimalListActivity.class);
 
     private AnimalListBtnListener animalListBtnListener = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //主视图载入
         setContentView(R.layout.activity_animal_list);
 
-        context = MainActivity.this;
+        context = AnimalListActivity.this;
 
         //获取每一行的标签
         list_animal = (ListView) findViewById(R.id.list_animate);
@@ -64,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Toast.makeText(context,"你点击了第"+position+"项",Toast.LENGTH_SHORT).show();
+                    logcatUtils.i("点击生效，点击了第"+position+"项");
                 }
             });
         }else{
@@ -75,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         animalListBtnListener = new AnimalListBtnListener(animalAdapter,this);
 
         //按钮监听
-        Button  addBtn = (Button) findViewById(R.id.addBtn);
+        Button addBtn = (Button) findViewById(R.id.addBtn);
         addBtn.setOnClickListener(animalListBtnListener);
 
         Button delBtn = (Button) findViewById(R.id.delBtn);

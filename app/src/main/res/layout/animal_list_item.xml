@@ -9,7 +9,7 @@
     android:layout_height="70dp"
     android:orientation="horizontal"
     android:descendantFocusability="blocksDescendants"
-    tools:context="com.study.runningsnail.snailapp.MainActivity">
+    tools:context="com.study.runningsnail.snailapp.activity.MainActivity">
 
         <!-- 定义一个用于显示图片的ImageView -->
         <ImageView

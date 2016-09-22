@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:id="@+id/startService"
+        android:background="@drawable/button_radius"
+        android:text="开始服务"
+        />
+
+    <Button
+        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:id="@+id/stopService"
+        android:background="@drawable/button_radius"
+        android:text="停止服务"
+        />
+</LinearLayout>

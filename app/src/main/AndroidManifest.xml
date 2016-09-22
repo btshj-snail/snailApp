@@ -8,13 +8,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.AnimalListActivity"/>
+        <activity android:name=".activity.SystemSupportActivity"/>
+        <activity android:name=".activity.ServiceActivity"/>
+
+
+        <!-- 配置Service组件,同时配置一个action -->
+        <service android:name=".service.TestService">
+            <intent-filter>
+                <action android:name="com.jay.example.service.TEST_SERVICE1"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
